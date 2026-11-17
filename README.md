@@ -58,5 +58,4 @@ Tasks are saved in the browser's Local Storage under the key `tasks`. Each task 
 - Google Material Symbols are loaded from Google Fonts, so an internet connection is needed for those icons.
 
 ## Author
-
-Your Name Muhammed Shaaban
+ Muhammed Shaaban
