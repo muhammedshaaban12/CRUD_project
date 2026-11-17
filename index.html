@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="page-container">
+        <section class="tasks-table" aria-labelledby="page-title">
+            <header class="tasks-header">
+                <h1 id="page-title">The Tasks</h1>
+                <button id="btn-add" class="circ add-button" type="button" aria-label="Add a task">
+                    <span class="material-symbols-outlined" aria-hidden="true">add</span>
+                </button>
+            </header>
+
+            <div id="tasks" class="tasks" aria-live="polite">
+                <!-- Tasks are rendered here by JavaScript. -->
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

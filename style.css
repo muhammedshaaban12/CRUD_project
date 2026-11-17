@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgb(30, 30, 88);
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 130px 20px 40px;
+}
+
+.tasks-table {
+    width: 60%;
+    background-color: antiquewhite;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 8px 60px;
+    background: rgb(200, 70, 70);
+    color: white;
+    text-align: center;
+}
+
+.tasks-header h1 {
+    margin: 0;
+}
+
+.add-button {
+    position: absolute;
+    right: 10px;
+    background: white;
+}
+
+.tasks {
+    padding: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 6px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    transition: box-shadow 0.2s;
+}
+
+.task.done {
+    background-color: rgb(158, 253, 160);
+}
+
+.task:hover {
+    box-shadow: 0 3px 15px rgba(97, 97, 97, 0.843);
+}
+
+.task-info {
+    width: 70%;
+    overflow-wrap: anywhere;
+}
+
+.task-info h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.task-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 30%;
+}
+
+button {
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(168, 168, 168, 0.38);
+}
+
+button:focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 2px;
+}
+
+.circ {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.delete-button {
+    background-color: brown;
+    color: white;
+}
+
+.complete-button {
+    background-color: rgb(42, 165, 48);
+    color: white;
+}
+
+.undo-button {
+    background-color: rgb(218, 70, 66);
+    color: white;
+}
+
+.edit-button {
+    background-color: rgb(42, 63, 165);
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .tasks-table {
+        width: 100%;
+    }
+
+    .page-container {
+        padding-top: 50px;
+    }
+
+    .task-actions {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .tasks {
+        padding: 12px;
+    }
+
+    .task {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-info {
+        width: 100%;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
